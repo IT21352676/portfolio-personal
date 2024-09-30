@@ -326,9 +326,9 @@ const contactContent = `
 
       {/* Contact Popup */}
       <Dialog open={openContact} onClose={handleContactClose}>
-        <DialogTitle>Contact Information 📞</DialogTitle>
-        <DialogContent>
-        <Typography>
+        <DialogTitle  sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>Contact Information 📞</DialogTitle>
+        <DialogContent sx={{ backgroundColor: '#333333' }}>
+        <Typography style={{ color: '#D3D3D3' }} variant="body1">
         <ReactMarkdown>{contactContent}</ReactMarkdown>
         </Typography>
         </DialogContent>
@@ -336,23 +336,22 @@ const contactContent = `
 
       {/* About Popup */}
       <Dialog open={openAbout} onClose={handleAboutClose}>
-        <DialogTitle>About Me 👨‍💻</DialogTitle>
-        <DialogContent>
-          <Typography variant="body1">
-          <ReactMarkdown>{aboutMeContent}</ReactMarkdown>
-
-          </Typography>
-        </DialogContent>
-      </Dialog>
+  <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }} >About Me 👨‍💻</DialogTitle>
+  <DialogContent sx={{ backgroundColor: '#333333' }}> {/* Light grey color */}
+    <Typography style={{ color: '#D3D3D3' }} variant="body1">
+      <ReactMarkdown>{aboutMeContent}</ReactMarkdown>
+    </Typography>
+  </DialogContent>
+</Dialog>
 
       {/* Projects Popup */}
       <Dialog open={openProjects} onClose={handleProjectsClose} maxWidth="lg" fullWidth>
-        <DialogTitle>My Projects</DialogTitle>
-        <DialogContent>
+        <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>My Projects 💻</DialogTitle>
+        <DialogContent sx={{ backgroundColor: '#333333' }}>
           <Grid container spacing={3} sx={{ maxHeight: '70vh', overflowY: 'auto' }}>
             {exampleProjects.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card sx={{ maxWidth: 345 , backgroundColor: '#696969' }} >
                   <CardHeader
                     avatar={
                       <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
