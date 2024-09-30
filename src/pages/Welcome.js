@@ -15,10 +15,94 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import { FaBehance } from 'react-icons/fa'; // Import Behance icon from FontAwesome
+import { FaBehance } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown'; // Import Behance icon from FontAwesome
 import './style.css';
 
 const WelcomePage = () => {
+
+    const aboutMeContent = `
+**Hirusha Keshan Sasanka**
+
+I am currently pursuing a **BSc (Hons) in Information Technology** at the **Sri Lanka Institute of Information Technology (SLIIT)**, where I am in my final year. My educational journey began at **Christ King College**, where I completed my GCE O/L, and continued at **Ananda College Colombo** for my GCE A/L.
+
+As a **full-stack developer**, I am passionate about creating dynamic and responsive web applications. I enjoy tackling challenges across both frontend and backend development, and I continuously seek to enhance my skill set with the latest technologies and frameworks.
+
+---
+
+### Technical Skills
+
+**Programming Languages:**
+- **Dart** 🦄
+- **Python** 🐍
+- **Java** ☕
+- **Kotlin** 🦙
+- **C++** 💻
+- **SQL** 📊
+- **JavaScript** 🌐
+
+**Frontend Frameworks:**
+- **React** ⚛️
+- **Angular** 🔄
+- **MUI** 🎨
+- **Bootstrap** 📐
+- **Tailwind CSS** 🌪️
+
+**Backend Frameworks:**
+- **Spring Boot** ☁️
+- **Express.js** ⚙️
+- **Discord.js** 🎮
+- **TensorFlow** 📈
+
+**Mobile Development:**
+- **Flutter** 📱
+- **React Native** 📲
+- **Android Studio** 🤖
+
+**IoT Development:**
+- **Arduino** 🛠️
+- **NodeMCU** 🌐
+
+**Databases:**
+- **MongoDB** 🗄️
+- **SQLite** 📚
+- **MySQL** 🔑
+- **AWS** ☁️
+- **Oracle** 🏛️
+
+**IDEs:**
+- **VS Code** 💻
+- **IntelliJ IDE** ⚙️
+- **PyCharm** 🐍
+- **Arduino IDE** ⚙️
+- **Eclipse** 🌌
+
+---
+
+### Projects & Experience
+
+I have worked on various projects that include:
+
+- **Web Applications**: Developed responsive applications using React and Express.js, focusing on user experience and functionality.
+- **Mobile Apps**: Created mobile applications using Flutter, integrating APIs for real-time data.
+- **IoT Solutions**: Designed and implemented IoT projects using Arduino and NodeMCU for smart home automation.
+
+My experience in **team collaboration** and **agile methodologies** has helped me to effectively contribute to group projects while honing my problem-solving skills.
+
+---
+
+### Interests
+
+I am an **electronics enthusiast**, constantly exploring new technologies and innovations in hardware and software integration. I enjoy experimenting with IoT devices, robotics, and machine learning, and I am always eager to learn about the latest advancements in technology.
+
+---
+
+### Future Aspirations
+
+I aim to leverage my skills to work on projects that make a meaningful impact, particularly in fields such as healthcare technology, education, and sustainability. I am excited about the potential of technology to solve real-world problems and improve lives.
+
+Feel free to connect with me to discuss potential collaborations, projects, or any exciting opportunities in the tech world!
+`;
 
     const handleGithubOpen = () => {
         window.open('https://github.com/IT21352676', '_blank');
@@ -245,10 +329,11 @@ const WelcomePage = () => {
 
       {/* About Popup */}
       <Dialog open={openAbout} onClose={handleAboutClose}>
-        <DialogTitle>About Me</DialogTitle>
+        <DialogTitle>About Me 👨‍💻</DialogTitle>
         <DialogContent>
           <Typography variant="body1">
-            I am a passionate developer with experience in web development and IoT projects. I love to learn and build amazing things.
+          <ReactMarkdown>{aboutMeContent}</ReactMarkdown>
+
           </Typography>
         </DialogContent>
       </Dialog>
