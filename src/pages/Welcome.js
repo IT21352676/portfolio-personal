@@ -120,7 +120,6 @@ const WelcomePage = () => {
 
           {/* Horizontal Button List */}
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
   <Button
     variant="contained"
     style={{
@@ -176,7 +175,7 @@ const WelcomePage = () => {
   </Button>
 </div>
 
-            </div>
+            
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
             <Button
         variant="contained"
