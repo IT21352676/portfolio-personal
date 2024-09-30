@@ -10,11 +10,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhotoIcon from '@mui/icons-material/Photo'; // Placeholder icon for Behance
-import WorkIcon from '@mui/icons-material/Work';
-import EmailIcon from '@mui/icons-material/Email';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import PhotoIcon from '@mui/icons-material/Photo'; // Placeholder icon for Behance
+// import WorkIcon from '@mui/icons-material/Work';
+// import EmailIcon from '@mui/icons-material/Email';
 import './style.css';
 
 const WelcomePage = () => {
