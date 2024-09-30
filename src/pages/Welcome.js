@@ -21,15 +21,15 @@ import './style.css';
 const WelcomePage = () => {
 
     const handleGithubOpen = () => {
-        window.open('https://github.com/your-profile', '_blank');
+        window.open('https://github.com/IT21352676', '_blank');
       };
 
       const handleLinkedinOpen = () => {
-        window.open('https://github.com/your-profile', '_blank');
+        window.open('https://www.linkedin.com/in/hirusha-sasanka-hs67?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7c6V3HkKTGqcdGN8C2IbWA%3D%3D', '_blank');
       };
 
       const handleBehanceOpen = () => {
-        window.open('https://github.com/your-profile', '_blank');
+        window.open('https://www.behance.net/hirushasasanka', '_blank');
       };
 
 
@@ -120,96 +120,117 @@ const WelcomePage = () => {
 
           {/* Horizontal Button List */}
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
-          <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#808080',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '16px', // Increase font size for text
-            }}
-            onClick={handleGithubOpen}
-            startIcon={<GitHubIcon style={{ fontSize: 30 }} />} // Increase GitHub icon size
-            >
-            GitHub
-          </Button>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
+  <Button
+    variant="contained"
+    style={{
+      backgroundColor: '#808080',
+      color: 'white',
+      margin: '0 10px',
+      padding: '12px 24px',
+      fontSize: '16px',
+      transition: 'background-color 0.3s ease',
+    }}
+    onClick={handleGithubOpen}
+    startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
+  >
+    GitHub
+  </Button>
 
-          <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#808080',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '16px', // Increase font size for text
-            }}
-            onClick={handleBehanceOpen}
-            startIcon={<FaBehance  style={{ fontSize: 30 }} />} // Increase GitHub icon size
-            >
-            Behance
-          </Button>
+  <Button
+    variant="contained"
+    style={{
+      backgroundColor: '#808080',
+      color: 'white',
+      margin: '0 10px',
+      padding: '12px 24px',
+      fontSize: '16px',
+      transition: 'background-color 0.3s ease',
+    }}
+    onClick={handleBehanceOpen}
+    startIcon={<FaBehance style={{ fontSize: 30 }} />}
+    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
+  >
+    Behance
+  </Button>
 
-          <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#808080',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '16px', // Increase font size for text
-            }}
-            onClick={handleLinkedinOpen}
-            startIcon={<LinkedInIcon style={{ fontSize: 30 }} />} // Increase GitHub icon size
-            >
-            LinkedIn
-          </Button>
+  <Button
+    variant="contained"
+    style={{
+      backgroundColor: '#808080',
+      color: 'white',
+      margin: '0 10px',
+      padding: '12px 24px',
+      fontSize: '16px',
+      transition: 'background-color 0.3s ease',
+    }}
+    onClick={handleLinkedinOpen}
+    startIcon={<LinkedInIcon style={{ fontSize: 30 }} />}
+    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
+  >
+    LinkedIn
+  </Button>
+</div>
+
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
             <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#1B3B6F',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '14px', // Increase font size for text
-            }}
-            onClick={handleProjectsOpen}
-            startIcon={<EmojiObjectsIcon style={{ fontSize: 20 }} />} // Increase GitHub icon size
-            >
-            Projects
-          </Button>
+        variant="contained"
+        style={{
+            backgroundColor: '#1B3B6F', // Original color for Projects
+            color: 'white',
+            margin: '0 10px',
+            padding: '12px 24px',
+            fontSize: '14px',
+            transition: 'background-color 0.3s',
+        }}
+        onClick={handleProjectsOpen}
+        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#153a60')}
+        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#1B3B6F')}
+        startIcon={<EmojiObjectsIcon style={{ fontSize: 20 }} />}
+      >
+        Projects
+      </Button>
 
-          <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#6C3483',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '14px', // Increase font size for text
-            }}
-            onClick={handleAboutOpen}
-            startIcon={<InfoIcon  style={{ fontSize: 20 }} />} // Increase GitHub icon size
-            >
-            About
-          </Button>
+      <Button
+        variant="contained"
+        style={{
+            backgroundColor: '#6C3483', // Original color for About
+            color: 'white',
+            margin: '0 10px',
+            padding: '12px 24px',
+            fontSize: '14px',
+            transition: 'background-color 0.3s',
+        }}
+        onClick={handleAboutOpen}
+        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#5B2C6F')}
+        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#6C3483')}
+        startIcon={<InfoIcon style={{ fontSize: 20 }} />}
+      >
+        About
+      </Button>
 
-          <Button
-            variant="contained"
-            style={{
-                backgroundColor: '#2DCB73',
-                color: 'white',
-                margin: '0 10px',
-                padding: '12px 24px', // Increase padding to make the button larger
-                fontSize: '14px', // Increase font size for text
-            }}
-            onClick={handleContactOpen}
-            startIcon={<ContactPageIcon style={{ fontSize: 20 }} />} // Increase GitHub icon size
-            >
-            Contact
-          </Button>
+      <Button
+        variant="contained"
+        style={{
+            backgroundColor: '#2DCB73', // Original color for Contact
+            color: 'white',
+            margin: '0 10px',
+            padding: '12px 24px',
+            fontSize: '14px',
+            transition: 'background-color 0.3s',
+        }}
+        onClick={handleContactOpen}
+        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#27a65c')}
+        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2DCB73')}
+        startIcon={<ContactPageIcon style={{ fontSize: 20 }} />}
+      >
+        Contact
+      </Button>
           </div>
         </div>
       </Container>
