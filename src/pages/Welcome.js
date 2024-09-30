@@ -12,12 +12,27 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhotoIcon from '@mui/icons-material/Photo'; // Placeholder icon for Behance
-import WorkIcon from '@mui/icons-material/Work';
-import EmailIcon from '@mui/icons-material/Email';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import { FaBehance } from 'react-icons/fa'; // Import Behance icon from FontAwesome
 import './style.css';
 
 const WelcomePage = () => {
+
+    const handleGithubOpen = () => {
+        window.open('https://github.com/your-profile', '_blank');
+      };
+
+      const handleLinkedinOpen = () => {
+        window.open('https://github.com/your-profile', '_blank');
+      };
+
+      const handleBehanceOpen = () => {
+        window.open('https://github.com/your-profile', '_blank');
+      };
+
+
   const [openContact, setOpenContact] = useState(false);
   const [openAbout, setOpenAbout] = useState(false);
   const [openProjects, setOpenProjects] = useState(false);
@@ -104,16 +119,97 @@ const WelcomePage = () => {
           </span>
 
           {/* Horizontal Button List */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
-            <Button variant="contained" color="primary" style={{ margin: '0 10px' }} onClick={handleProjectsOpen}>
-              Projects
-            </Button>
-            <Button variant="contained" color="secondary" style={{ margin: '0 10px' }} onClick={handleContactOpen}>
-              Contact
-            </Button>
-            <Button variant="contained" color="success" style={{ margin: '0 10px' }} onClick={handleAboutOpen}>
-              About
-            </Button>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
+          <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#808080',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '16px', // Increase font size for text
+            }}
+            onClick={handleGithubOpen}
+            startIcon={<GitHubIcon style={{ fontSize: 30 }} />} // Increase GitHub icon size
+            >
+            GitHub
+          </Button>
+
+          <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#808080',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '16px', // Increase font size for text
+            }}
+            onClick={handleBehanceOpen}
+            startIcon={<FaBehance  style={{ fontSize: 30 }} />} // Increase GitHub icon size
+            >
+            Behance
+          </Button>
+
+          <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#808080',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '16px', // Increase font size for text
+            }}
+            onClick={handleLinkedinOpen}
+            startIcon={<LinkedInIcon style={{ fontSize: 30 }} />} // Increase GitHub icon size
+            >
+            LinkedIn
+          </Button>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
+            <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#1B3B6F',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '14px', // Increase font size for text
+            }}
+            onClick={handleProjectsOpen}
+            startIcon={<EmojiObjectsIcon style={{ fontSize: 20 }} />} // Increase GitHub icon size
+            >
+            Projects
+          </Button>
+
+          <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#6C3483',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '14px', // Increase font size for text
+            }}
+            onClick={handleAboutOpen}
+            startIcon={<InfoIcon  style={{ fontSize: 20 }} />} // Increase GitHub icon size
+            >
+            About
+          </Button>
+
+          <Button
+            variant="contained"
+            style={{
+                backgroundColor: '#2DCB73',
+                color: 'white',
+                margin: '0 10px',
+                padding: '12px 24px', // Increase padding to make the button larger
+                fontSize: '14px', // Increase font size for text
+            }}
+            onClick={handleContactOpen}
+            startIcon={<ContactPageIcon style={{ fontSize: 20 }} />} // Increase GitHub icon size
+            >
+            Contact
+          </Button>
           </div>
         </div>
       </Container>
