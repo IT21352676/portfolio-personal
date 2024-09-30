@@ -104,6 +104,12 @@ I aim to leverage my skills to work on projects that make a meaningful impact, p
 Feel free to connect with me to discuss potential collaborations, projects, or any exciting opportunities in the tech world!
 `;
 
+const contactContent = `
+**Email:** [hirushasasanka8316@gmail.com](mailto:hirushasasanka8316@gmail.com)  
+**Phone:** +94 705324475  
+**Address:** 261 A/53 Siripura 2nd Lane, Palanwatta, Pannipitiya
+  `;
+
     const handleGithubOpen = () => {
         window.open('https://github.com/IT21352676', '_blank');
       };
@@ -320,10 +326,11 @@ Feel free to connect with me to discuss potential collaborations, projects, or a
 
       {/* Contact Popup */}
       <Dialog open={openContact} onClose={handleContactClose}>
-        <DialogTitle>Contact Info</DialogTitle>
+        <DialogTitle>Contact Information 📞</DialogTitle>
         <DialogContent>
-          <Typography>Email: hirusha@example.com</Typography>
-          <Typography>Phone: +123456789</Typography>
+        <Typography>
+        <ReactMarkdown>{contactContent}</ReactMarkdown>
+        </Typography>
         </DialogContent>
       </Dialog>
 
