@@ -188,33 +188,67 @@ const contactContent = `
   ];
 
   return (
-    <div style={{ display:'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+    <div>
+      <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' /> 
 
-      <div id='stars'></div>
-      <div id='stars2'></div>
-      <div id='stars3'></div>
-      <div id='rocket-icon'></div> 
+      <Container style={{ flexGrow: 1,  marginBlockEnd: '50px'}}>
+        
+     
+      
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 60, marginBlockStart: '100px' }}>
+                <span style={{
+                    background: '-webkit-linear-gradient(white, #38495a)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '10px'
+                }}>
+                    WELCOME TO HIRUSHA'S
+                </span>
+            </Typography>
 
-      <Container style={{ flexGrow: 1 }}>
-        <div id='title' style={{ textAlign: 'center' }}>
-          <span>WELCOME TO HIRUSHA'S</span>
-          <br />
-          <span style={{ fontSize: '3rem' }}>UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
-          </span>
-          <br/>
-          <span style={{ fontSize: '2rem' }}>ALL OF THE TIME EXPLORE DEEPLY 
-          </span>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 60, marginBlockStart: '20px' }}>
+                <span style={{
+                    background: '-webkit-linear-gradient(white, #38495a)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '10px'
+                }}>
+                    UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
+                </span>
+            </Typography>
+
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 30, marginBlockStart: '80px' }}>
+                <span style={{
+                    background: '-webkit-linear-gradient(white, #38495a)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '10px'
+                }}>
+                    ALL OF THE TIME EXPLORE DEEPLY 
+                </span>
+            </Typography>
+
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 20, marginBlockStart: '80px' }}>
+                <span style={{
+                    background: '-webkit-linear-gradient(white, #38495a)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '5px'
+                }}>
+                   I AM HIRUSHA KESHAN SASANKA
+                   
+                </span>
+            </Typography>
 
           {/* Horizontal Button List */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
+ <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
   <Button
     variant="contained"
     style={{
       backgroundColor: '#808080',
       color: 'white',
-      margin: '0 10px',
-      padding: '12px 24px',
+      margin: '0 6px',
+      padding: '12px 40px',
       fontSize: '16px',
       transition: 'background-color 0.3s ease',
     }}
@@ -231,8 +265,8 @@ const contactContent = `
     style={{
       backgroundColor: '#808080',
       color: 'white',
-      margin: '0 10px',
-      padding: '12px 24px',
+      margin: '0 6px',
+      padding: '12px 45px',
       fontSize: '16px',
       transition: 'background-color 0.3s ease',
     }}
@@ -249,8 +283,8 @@ const contactContent = `
     style={{
       backgroundColor: '#808080',
       color: 'white',
-      margin: '0 10px',
-      padding: '12px 24px',
+      margin: '0 6px',
+      padding: '12px 40px',
       fontSize: '16px',
       transition: 'background-color 0.3s ease',
     }}
@@ -319,7 +353,7 @@ const contactContent = `
         Contact
       </Button>
           </div>
-        </div>
+        
       </Container>
 
       {/* Contact Popup */}
