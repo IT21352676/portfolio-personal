@@ -188,13 +188,13 @@ const contactContent = `
   ];
 
   return (
-    <div style={{ display:'-webkit-inline-flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display:'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
 
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
-      <div id='rocket-icon'></div>
+      <div id='rocket-icon'></div>  
 
       <Container style={{ flexGrow: 1 }}>
         <div id='title' style={{ textAlign: 'center' }}>
