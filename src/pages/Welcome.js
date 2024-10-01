@@ -197,13 +197,13 @@ const contactContent = `
       <div id='rocket-icon'></div>
 
       <Container style={{ flexGrow: 1 }}>
-        <div id='title' style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <div id='title' style={{ textAlign: 'center' }}>
           <span>WELCOME TO HIRUSHA'S</span>
           <br />
           <span style={{ fontSize: '3rem' }}>
             UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
           </span>
-          <br />
+          <br/>
           <span style={{ fontSize: '2rem' }}>
             ALL OF THE TIME EXPLORE DEEPLY 
           </span>

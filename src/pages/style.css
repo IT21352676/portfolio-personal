@@ -1,9 +1,19 @@
-html {
-    height: 100%;
-    background: radial-gradient(ellipse at bottom, #202020 0%, #000000 100%);
-    overflow: hidden;
+@media only screen and (min-width: 601px) {
+  html {
+    background-color: #111111; /* Solid black background for desktop */
+    overflow: hidden; /* Ensure overflow is hidden for desktop */
   }
+}
   
+  @media only screen and (max-width: 600px) {
+    html{
+    background-color: #111111;
+    overflow: visible;
+    
+  
+    }
+  }
+
   #stars {
     width: 1px;
     height: 1px;
