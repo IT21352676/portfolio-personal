@@ -188,7 +188,7 @@ const contactContent = `
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column'}}>
       <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
 
       <div id='stars'></div>
@@ -200,12 +200,10 @@ const contactContent = `
         <div id='title' style={{ textAlign: 'center' }}>
           <span>WELCOME TO HIRUSHA'S</span>
           <br />
-          <span style={{ fontSize: '3rem' }}>
-            UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
+          <span style={{ fontSize: '3rem' }}>UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
           </span>
           <br/>
-          <span style={{ fontSize: '2rem' }}>
-            ALL OF THE TIME EXPLORE DEEPLY 
+          <span style={{ fontSize: '2rem' }}>ALL OF THE TIME EXPLORE DEEPLY 
           </span>
 
           {/* Horizontal Button List */}

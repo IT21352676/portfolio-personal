@@ -2,6 +2,7 @@
   html {
     background-color: #111111; /* Solid black background for desktop */
     overflow: hidden; /* Ensure overflow is hidden for desktop */
+    
   }
 }
   
@@ -9,7 +10,8 @@
     html{
     background-color: #111111;
     overflow: visible;
-    
+    max-width: 100%;
+    height: 40px;
   
     }
   }
@@ -78,6 +80,7 @@
     letter-spacing: 10px;
     margin-top: -60px;
     padding-left: 10px;
+  
   }
 
   #title span {
