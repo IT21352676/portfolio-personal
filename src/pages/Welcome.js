@@ -194,7 +194,7 @@ const contactContent = `
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
-      <div id='rocket-icon'></div>  
+      <div id='rocket-icon'></div> 
 
       <Container style={{ flexGrow: 1 }}>
         <div id='title' style={{ textAlign: 'center' }}>
