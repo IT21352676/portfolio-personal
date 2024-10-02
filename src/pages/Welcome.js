@@ -249,7 +249,7 @@ const contactContent = `
       color: 'white',
       margin: '0 6px',
       padding: '12px 40px',
-      fontSize: '16px',
+      fontSize: '14px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleGithubOpen}
@@ -267,7 +267,7 @@ const contactContent = `
       color: 'white',
       margin: '0 6px',
       padding: '12px 45px',
-      fontSize: '16px',
+      fontSize: '14px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleBehanceOpen}
@@ -285,7 +285,7 @@ const contactContent = `
       color: 'white',
       margin: '0 6px',
       padding: '12px 40px',
-      fontSize: '16px',
+      fontSize: '14px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleLinkedinOpen}
