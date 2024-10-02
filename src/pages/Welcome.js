@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import {
   Container, Button, Dialog, DialogTitle, DialogContent, Card, CardHeader, CardMedia, CardContent,
-  CardActions,
-  Avatar, IconButton, Typography, Collapse, Grid
+  Typography, Grid
 } from '@mui/material';
-import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -16,7 +11,9 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import { FaBehance } from 'react-icons/fa';
-import ReactMarkdown from 'react-markdown'; // Import Behance icon from FontAwesome
+import ReactMarkdown from 'react-markdown';
+import SwipeableViews from 'react-swipeable-views';
+ // Import Behance icon from FontAwesome
 import './style.css';
 
 const WelcomePage = () => {
@@ -126,7 +123,7 @@ const contactContent = `
   const [openContact, setOpenContact] = useState(false);
   const [openAbout, setOpenAbout] = useState(false);
   const [openProjects, setOpenProjects] = useState(false);
-  const [expanded, setExpanded] = useState(false);
+  
 
   const handleContactOpen = () => setOpenContact(true);
   const handleContactClose = () => setOpenContact(false);
@@ -137,55 +134,72 @@ const contactContent = `
   const handleProjectsOpen = () => setOpenProjects(true);
   const handleProjectsClose = () => setOpenProjects(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+ 
 
   const exampleProjects = [
     {
-      title: 'Project 1',
-      image: '/static/images/cards/paella.jpg', // Example image path
-      date: 'September 14, 2016',
+      title: 'Virtual Dressing Room',
+      images: [
+        require('./images/Virtualdressing/vr1.png'),    // Image 1
+        require('./images/Virtualdressing/vr2.png'),   // Image 2
+        require('./images/Virtualdressing/vr3.png'),
+        require('./images/Virtualdressing/vr4.png')     // Image 3
+      ],
+      date: '2024',
       description: 'This impressive project is a perfect example of modern technology integration...',
       detailedContent: 'Detailed description and method of development for Project 1...',
     },
+
     {
-      title: 'Project 2',
-      image: '/static/images/cards/paella.jpg',
-      date: 'October 21, 2019',
-      description: 'Project 2 is a powerful solution for dynamic environments...',
-      detailedContent: 'Detailed description and method of development for Project 2...',
+      title: 'FitX Fitness Social Web Application',
+      images: [
+        require('./images/Fitx/fitx1.png'),    // Image 1
+        require('./images/Fitx/fitx2.png'),   // Image 2
+        require('./images/Fitx/fitx3.png')    // Image 3
+      ],
+      date: '2024',
+      description: 'This impressive project is a perfect example of modern technology integration...',
+      detailedContent: 'Detailed description and method of development for Project 1...',
     },
+
     {
-      title: 'Project 2',
-      image: '/static/images/cards/paella.jpg',
-      date: 'October 21, 2019',
-      description: 'Project 2 is a powerful solution for dynamic environments...',
-      detailedContent: 'Detailed description and method of development for Project 2...',
+      title: 'LionTours (PVT)LTD Online System (Fuel Management)',
+      images: [
+        require('./images/Liontours/fuel3.jpg'),    // Image 1
+        require('./images/Liontours/fuel1.jpg'),   // Image 2
+        require('./images/Liontours/fuel5.jpg')    // Image 3
+      ],
+      date: '2023',
+      description: 'This impressive project is a perfect example of modern technology integration...',
+      detailedContent: 'Detailed description and method of development for Project 1...',
     },
+
     {
-      title: 'Project 2',
-      image: '/static/images/cards/paella.jpg',
-      date: 'October 21, 2019',
-      description: 'Project 2 is a powerful solution for dynamic environments...',
-      detailedContent: 'Detailed description and method of development for Project 2...',
+      title: 'ZUMA Online Book Store',
+      images: [
+        require('./images/Bookstore/Home.png'),    // Image 1
+        require('./images/Bookstore/Login.png'),   // Image 2
+        require('./images/Bookstore/Persona 1.png')    // Image 3
+      ],
+      date: '2022',
+      description: 'This impressive project is a perfect example of modern technology integration...',
+      detailedContent: 'Detailed description and method of development for Project 1...',
     },
+
     {
-      title: 'Project 2',
-      image: '/static/images/cards/paella.jpg',
-      date: 'October 21, 2019',
-      description: 'Project 2 is a powerful solution for dynamic environments...',
-      detailedContent: 'Detailed description and method of development for Project 2...',
-    },
-    {
-      title: 'Project 2',
-      image: '/static/images/cards/paella.jpg',
-      date: 'October 21, 2019',
-      description: 'Project 2 is a powerful solution for dynamic environments...',
-      detailedContent: 'Detailed description and method of development for Project 2...',
-    },
+      title: 'Hotel Reservation System',
+      images: [
+        require('./images/Hotelreservation/M640c40e6087ee807bdb1c185089119db1647588758136.png'),    // Image 1
+        require('./images/Hotelreservation/persona 2.png')  // Image 2    // Image 3
+      ],
+      date: '2022',
+      description: 'This impressive project is a perfect example of modern technology integration...',
+      detailedContent: 'Detailed description and method of development for Project 1...',
+    }
+    
     // Add more projects as needed
   ];
+  
 
   return (
     <div>
@@ -311,7 +325,7 @@ const contactContent = `
     onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
   >
     LinkedIn
-  </Button>
+    </Button>
 </div>
 
             
@@ -325,7 +339,7 @@ const contactContent = `
             padding: '12px 24px',
             fontSize: '14px',
             transition: 'background-color 0.3s',
-        }}z
+        }}
         onClick={handleProjectsOpen}
         onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#153a60')}
         onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#1B3B6F')}
@@ -400,53 +414,36 @@ const contactContent = `
           <Grid container spacing={3} sx={{ maxHeight: '70vh', overflowY: 'auto' }}>
             {exampleProjects.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card sx={{ maxWidth: 345 , backgroundColor: '#696969' }} >
-                  <CardHeader
-                    avatar={
-                      <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        {project.title.charAt(0)}
-                      </Avatar>
-                    }
-                    action={
-                      <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                      </IconButton>
-                    }
-                    title={project.title}
-                    subheader={project.date}
-                  />
-                  <CardMedia
-                    component="img"
-                    height="194"
-                    image={project.image}
-                    alt={project.title}
-                  />
-                  <CardContent>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                      <FavoriteIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                      <ShareIcon />
-                    </IconButton>
-                    <IconButton
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                    >
-                      <ExpandMoreIcon />
-                    </IconButton>
-                  </CardActions>
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                      <Typography paragraph>{project.detailedContent}</Typography>
-                    </CardContent>
-                  </Collapse>
-                </Card>
+
+<Card sx={{ maxWidth: 345, backgroundColor: '#696969' }}>
+  <CardHeader
+   
+    title={project.title}
+    subheader={project.date}
+  />
+  
+  {/* Swiping images using react-swipeable-views */}
+  <SwipeableViews>
+    {project.images.map((img, index) => (
+      <CardMedia
+        key={index}
+        component="img"
+        height="auto"
+        image={img}
+        alt={`${project.title} - image ${index + 1}`}
+      />
+    ))}
+  </SwipeableViews>
+
+  <CardContent>
+    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+      {project.description}
+    </Typography>
+  </CardContent>
+  
+
+</Card>
+
               </Grid>
             ))}
           </Grid>
