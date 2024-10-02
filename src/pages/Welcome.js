@@ -195,62 +195,68 @@ const contactContent = `
         
      
       
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 30, marginBlockStart: '100px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 40, marginBlockStart: '80px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    WELCOME TO
+                   STEP IN TO
                 </span>
             </Typography>
 
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 60, marginBlockStart: '20px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 40, marginBlockStart: '20px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    HIRUSHA'S
+                    COSMICCODE <RocketLaunchIcon style={{ fontSize: 30, color: 'white' }} /> 
+                    
                 </span>
             </Typography>
-
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 40, marginBlockStart: '20px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 20, marginBlockStart: '10px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    UNIVERSE <RocketLaunchIcon style={{ fontSize: 50, color: 'white' }} />
+                      BY
                 </span>
             </Typography>
-
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 30, marginBlockStart: '80px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 40, marginBlockStart: '20px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    ALL OF THE TIME EXPLORE DEEPLY 
+                     HIRUSHA
                 </span>
             </Typography>
 
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 20, marginBlockStart: '80px' }}>
+      
+
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 20, marginTop: '150px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    letterSpacing: '5px'
+                    letterSpacing: '10px'
                 }}>
-                   I AM HIRUSHA KESHAN SASANKA
-                   
+                   WHERE INNOVATION MEETS CREATIVITY, AND TECHNOLOGY PAVES THE WAY FOR ENDLESS POSSIBILITIES
                 </span>
             </Typography>
 
+    
+
+
+            
+
+            
           {/* Horizontal Button List */}
  <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
   <Button
