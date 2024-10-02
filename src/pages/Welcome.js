@@ -247,7 +247,7 @@ const contactContent = `
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                   WHERE INNOVATION MEETS CREATIVITY, AND TECHNOLOGY PAVES THE WAY FOR ENDLESS POSSIBILITIES
+                  WHERE INNOVATION MEETS CREATIVITY, AND TECHNOLOGY PAVES THE WAY FOR ENDLESS POSSIBILITIES
                 </span>
             </Typography>
 
@@ -315,7 +315,7 @@ const contactContent = `
 </div>
 
             
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
             <Button
         variant="contained"
         style={{
@@ -325,7 +325,7 @@ const contactContent = `
             padding: '12px 24px',
             fontSize: '14px',
             transition: 'background-color 0.3s',
-        }}
+        }}z
         onClick={handleProjectsOpen}
         onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#153a60')}
         onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#1B3B6F')}

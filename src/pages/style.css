@@ -1,6 +1,6 @@
 @media only screen and (min-width: 601px) {
   html {
-    overflow: hidden; /* Ensure overflow is hidden for desktop */
+     /* Ensure overflow is hidden for desktop */
     background-color: #111111; /* Optional: add a solid black color as a fallback */
     background-image: url('moon-stars-astrophotography-dark-background-5k-8k-9k-9000x9000-6197.jpg'); 
     background-size: cover; /* Optional: ensure the image covers the entire area */
