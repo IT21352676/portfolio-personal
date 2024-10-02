@@ -195,18 +195,29 @@ const contactContent = `
         
      
       
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 60, marginBlockStart: '100px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 30, marginBlockStart: '100px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    WELCOME TO HIRUSHA'S
+                    WELCOME TO
                 </span>
             </Typography>
 
             <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 60, marginBlockStart: '20px' }}>
+                <span style={{
+                    background: '-webkit-linear-gradient(white, #38495a)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    letterSpacing: '10px'
+                }}>
+                    HIRUSHA'S
+                </span>
+            </Typography>
+
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 40, marginBlockStart: '20px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
