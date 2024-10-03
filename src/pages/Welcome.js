@@ -22,6 +22,8 @@ import './style.css';
 
 const WelcomePage = () => {
 
+  const isMobile = window.innerWidth < 600;
+
     const aboutMeContent = `
 **Hirusha Keshan Sasanka**
 
@@ -635,7 +637,13 @@ This project reflects my commitment to using technology for social impact, aimin
   <DialogContent sx={{ backgroundColor: '#333333', display: 'flex', flexDirection: 'column' }}>
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '16px' }}>
       {exampleProjects.map((project, index) => (
-        <div key={index} style={{ flex: '1 1 calc(33% - 16px)', minWidth: '300px', maxWidth: '345px' }}>
+         
+        <div key={index} style={{
+          flex: '1 1 calc(33% - 16px)', // Default for desktop
+          minWidth: isMobile ? '290px' : '400px', // Minimum width for mobile or desktop
+          maxWidth: isMobile ? '290px' : '745px', // Maximum width for mobile or desktop
+          margin: '8px', // Margin for spacing
+        }}>
           <Card sx={{ backgroundColor: '#696969', height: '100%' }}>
             <CardHeader
               title={project.title}
