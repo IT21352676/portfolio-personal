@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   Container, Button, Dialog, DialogTitle, DialogContent, Card, CardHeader, CardMedia, CardContent,
-  Typography
+  Typography,Grid
 } from '@mui/material';
 
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
@@ -21,8 +21,6 @@ import 'swiper/css/pagination';
 import './style.css';
 
 const WelcomePage = () => {
-
-  const isMobile = window.innerWidth < 600;
 
     const aboutMeContent = `
 **Hirusha Keshan Sasanka**
@@ -274,12 +272,9 @@ This project reflects my commitment to using technology for social impact, aimin
     {
       title: 'Guru Gedara (Sinhala App)',
       images: [
-        require('./images/Gurugedara/gg1.jpg'),
-        require('./images/Gurugedara/gg3.jpg'),
-        require('./images/Gurugedara/gg4.jpg'),
-        require('./images/Gurugedara/gg2.jpg'),
-        require('./images/Gurugedara/gg5.jpg'),
-
+        require('./images/Gurugedara/gg1.jpeg'),
+        require('./images/Gurugedara/gg2.PNG'),
+        
         
       ],
       date: '2024',
@@ -364,11 +359,8 @@ This project reflects my commitment to using technology for social impact, aimin
     {
       title: 'CannyCube Mobile Application',
       images: [
-        require('./images/Cannycube/cc4.jpg'),
-        require('./images/Cannycube/cc5.jpg'),
-        require('./images/Cannycube/cc3.jpg'),
-        require('./images/Cannycube/cc1.jpg'),
-        require('./images/Cannycube/cc2.jpg'),
+        require('./images/Cannycube/cc1.PNG'),
+
 
       ],
       date: '2023',
@@ -631,53 +623,52 @@ This project reflects my commitment to using technology for social impact, aimin
 
       {/* Projects Popup */}
       <Dialog open={openProjects} onClose={handleProjectsClose} maxWidth="lg" fullWidth>
-  <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>
-    My Projects 💻
-  </DialogTitle>
-  <DialogContent sx={{ backgroundColor: '#333333', display: 'flex', flexDirection: 'column' }}>
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '16px' }}>
-      {exampleProjects.map((project, index) => (
-         
-        <div key={index} style={{
-          flex: '1 1 calc(33% - 16px)', // Default for desktop
-          minWidth: isMobile ? '290px' : '400px', // Minimum width for mobile or desktop
-          maxWidth: isMobile ? '290px' : '745px', // Maximum width for mobile or desktop
-          margin: '8px', // Margin for spacing
-        }}>
-          <Card sx={{ backgroundColor: '#696969', height: '100%' }}>
-            <CardHeader
-              title={project.title}
-              subheader={project.date}
-            />
-            {/* Swiping images using react-swipeable-views */}
-            <Swiper
-              spaceBetween={10} // Space between slides
-              slidesPerView={1}  // Number of slides to show
-              pagination={{ clickable: true }}  // Enable pagination dots
-              grabCursor={true}  // Enable mouse grabbing on desktop
-            >
-              {project.images.map((img, index) => (
-                <SwiperSlide key={index}>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={img}
-                    alt={`${project.title} - image ${index + 1}`}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography variant="body2" sx={{ color: 'text.secondary', minHeight: '100px' }}>
-                {project.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        </div>
+        <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>My Projects 💻</DialogTitle>
+        <DialogContent sx={{ backgroundColor: '#333333' }}>
+          <Grid container spacing={3} sx={{ maxHeight: '70vh', overflowY: 'auto' }}>
+            {exampleProjects.map((project, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+
+<Card sx={{ maxWidth: 345, backgroundColor: '#696969' }}>
+  <CardHeader
+   
+    title={project.title}
+    subheader={project.date}
+  />
+  
+  {/* Swiping images using react-swipeable-views */}
+  <Swiper
+      spaceBetween={10} // Space between slides
+      slidesPerView={1}  // Number of slides to show       // Enable navigation arrows
+      pagination={{ clickable: true }}  // Enable pagination dots
+      grabCursor={true}  // Enable mouse grabbing on desktop
+    >
+      {project.images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <CardMedia
+            component="img"
+            height="auto"
+            image={img}
+            alt={`${project.title} - image ${index + 1}`}
+          />
+        </SwiperSlide>
       ))}
-    </div>
-  </DialogContent>
-</Dialog>
+    </Swiper>
+
+  <CardContent>
+    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+      {project.description}
+    </Typography>
+  </CardContent>
+  
+
+</Card>
+
+              </Grid>
+            ))}
+          </Grid>
+        </DialogContent>
+      </Dialog>
 
     </div>
   );
