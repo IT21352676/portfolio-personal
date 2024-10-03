@@ -12,7 +12,11 @@ import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import { FaBehance } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
-import SwipeableViews from 'react-swipeable-views';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
  // Import Behance icon from FontAwesome
 import './style.css';
 
@@ -134,9 +138,173 @@ const contactContent = `
   const handleProjectsOpen = () => setOpenProjects(true);
   const handleProjectsClose = () => setOpenProjects(false);
 
+  const projectDescriptionVr = `
+  **Virtual Dressing Room**
+  
+  A cutting-edge application that leverages computer vision and artificial intelligence to revolutionize the online shopping experience. Built using **Cvzone** and **TensorFlow** in **Python**, this project allows users to virtually try on outfits in real time. By uploading a video or using their camera with augmented reality (AR) technology, users can visualize how a dress will look on them before making a purchase.
+  
+  ### Key Features:
+  - **Virtual Try-On**: Users can upload a video or use their camera to try on clothing items virtually.
+  - **Size Suggestion**: The system analyzes body dimensions and suggests the ideal size for each user.
+  - **Computer Vision**: Built with **cvzone**, this project uses advanced computer vision techniques for real-time body tracking.
+  - **AI-Powered**: Integrated with **TensorFlow** for accurate body size and fit analysis.
+  
+  This innovative approach enhances the shopping experience, offering a personalized and immersive way to explore fashion.
+  `;
+
+  const projectDescriptionFitX = `
+**FitX Fitness Social Web Application**
+
+A fully functional fitness social platform designed to connect users who share an interest in health and fitness. Built with **Spring Boot** for the backend, **React** for the frontend, and **MUI** for the UI, this web app lets users sign up, log in, and connect with others through social media-like features.
+
+### Key Features:
+- **Login & Signup**: Secure authentication, including **Google Authentication**.
+- **Social Interaction**: Users can share posts, comment, like, and connect with others.
+- **CRUD Operations**: Comprehensive profile and post management.
+- **Responsive Design**: Works smoothly across devices.
+- **Backend**: **Spring Boot** powers the server-side logic and database.
+- **Frontend**: **React** and **MUI** provide an interactive user experience.
+
+FitX offers a platform for fitness enthusiasts to stay connected, track progress, and share motivation.
+`;
+
+const projectDescriptionLionTours = `
+**LionTours (PVT) LTD Online System (Fuel Management)**
+
+A comprehensive fuel management system developed for **LionTours**, a tourism company. Built using the **MERN stack**, this system allows the company to track and manage fuel usage across its fleet and storage tanks, providing real-time data on current fuel levels and consumption rates.
+
+### Key Features:
+- **Fuel Management**: Tracks fuel consumption for all company vehicles and storage tanks.
+- **CRUD Functionality**: Add, update, and manage vehicle and fuel records with ease.
+- **Dashboard Display**: View real-time fuel levels and consumption data across the fleet.
+- **Frontend**: Developed using **Bootstrap** and **Tailwind CSS** for a modern, responsive interface.
+- **Backend**: Fully powered by **MERN** stack technologies, ensuring scalability and performance.
+
+This system streamlines fuel tracking, helping **LionTours** optimize fuel efficiency across their entire fleet.
+`;
+  
+const projectDescriptionZuma = `
+**ZUMA Online Book Store** (2022)
+
+An **online book store** providing users with essential functionalities for browsing, searching, and purchasing books. This project served as a stepping stone into **web design**, incorporating basic **UI/UX design principles**.
+
+### Key Features:
+- **Frontend**: Built with **HTML**, **CSS**, and **JavaScript**, creating a clean, user-friendly interface.
+- **Backend**: Utilized **PHP** for handling basic user interactions and server communication.
+- **Basic Functionalities**: Users can browse the book catalog, search for specific titles, and add books to their cart.
+- **UI/UX Design**: Focused on simple and intuitive navigation to enhance user experience.
+  
+This project laid the foundation for developing more advanced web applications and solidified my skills in **frontend** and **backend** development.
+`;
+
+const projectDescriptionHotelReservation = `
+**Hotel Reservation System**
+
+This project represents my **first venture** into web development, focusing on basic **UI** and **wireframe design**. It served as an introduction to the world of web applications and helped me familiarize myself with **Figma** for design purposes.
+
+### Key Features:
+- **UI Design**: Created a basic user interface that allows users to navigate effortlessly through the reservation process.
+- **Wireframe**: Developed initial wireframes to visualize the application layout and flow.
+- **Sample Client**: Designed specifically for **Ciyenra Hotel**, enhancing their online presence and reservation capabilities.
+  
+This project laid the groundwork for my journey into more complex web applications, providing valuable insights into the design and development process.
+`;
+
+const projectDescriptionCannyCube = `
+**CannyCube Mobile Application**
+
+Developed a **salary management** mobile application using **Kotlin** and **Android Studio**, designed to cater to the needs of both companies and employees.
+
+### Key Features:
+- **Fully Functional CRUD**: Implemented all essential operations for managing employee salaries, including Create, Read, Update, and Delete functionalities.
+- **User Authentication**: Integrated **login** and **signup** functionalities to ensure secure access for both companies and employees.
+- **User-Friendly Interface**: Designed a clean and intuitive interface that enhances the user experience, making it easy for users to navigate the app.
+
+This project demonstrates my ability to create mobile applications that meet real-world needs while employing best practices in development and design.
+`;
+
+const projectDescriptionRescueMe = `
+**RescueMe.com - Website Redesign**
+
+Led the **redesign** of the **RescueMe.com** website, focusing on enhancing the user experience by adhering to **HCI standards**. Utilized **Figma** to implement various **UI/UX enhancements** aimed at improving usability and accessibility.
+
+### Key Features:
+- **User Experience Improvement**: Redesigned the website layout to make navigation more intuitive and user-friendly, ensuring that users can easily find the information they need.
+- **Proper Fonts and Sizes**: Selected appropriate typography to enhance readability and create a visually appealing interface.
+- **Decent Color Palette**: Implemented a well-thought-out color scheme that aligns with the brand identity while improving aesthetic appeal.
+
+This project reflects my commitment to creating engaging and effective web experiences through thoughtful design.
+`;
+
+
+const projectDescriptionBookNest = `
+**Book Nest - Book Recommendation Application**
+
+Developed **Book Nest**, a book recommendation application leveraging **React**, **Express**, **MongoDB**, and **Node.js**. This application features a seamless integration with a **Discord bot** using **Discord.js**.
+
+### Key Features:
+- **Personalized Recommendations**: Users receive book recommendations based on their reading history, utilizing the **ChatGPT API** for intelligent suggestions.
+- **User Authentication**: Implemented secure user authentication with **login** and **signup** functionalities, ensuring a personalized experience.
+- **JWT Web Tokens**: Employed **JSON Web Tokens (JWT)** for secure session management, providing users with a reliable and safe access mechanism.
+
+This project demonstrates my ability to integrate various technologies to deliver a comprehensive solution in the book recommendation domain.
+`;
+
+
+const projectDescriptionGuruGedara = `
+**Guru Gedara (ගුරු ගෙදර)**
+
+Currently developing **Guru Gedara**, a mobile application designed specifically for **Dyslexic children** using **Flutter** and **Dart**. This innovative application utilizes **Machine learning algorithms** to identify disabilities and assess their severity, providing tailored educational experiences.
+
+### Key Features:
+- **Adaptable Learning Methods**: Incorporates customizable learning methods that cater to the unique needs of each child, promoting effective learning.
+- **Child-Friendly UI/UX**: Designed with appropriate UI/UX elements and colors to create an engaging and welcoming environment for children.
+- **Localized Experience**: Specially designed in **Sinhala** language to ensure accessibility for Sri Lankan children, making learning easier and more relatable.
+
+This project reflects my commitment to using technology for social impact, aiming to enhance learning experiences for children with disabilities.
+`;
+
+
  
 
   const exampleProjects = [
+
+    {
+      title: 'Guru Gedara (Sinhala App)',
+      images: [
+        require('./images/Gurugedara/gg1.jpg'),
+        require('./images/Gurugedara/gg3.jpg'),
+        require('./images/Gurugedara/gg4.jpg'),
+        require('./images/Gurugedara/gg2.jpg'),
+        require('./images/Gurugedara/gg5.jpg'),
+
+        
+      ],
+      date: '2024',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionGuruGedara}</ReactMarkdown>
+    </Typography>
+      
+    },
+
+    {
+      title: 'Book Nest',
+      images: [
+        require('./images/Booknest/bn1.PNG'),    // Image 1
+        require('./images/Booknest/bn2.PNG'),
+        require('./images/Booknest/bn3.PNG'), 
+        require('./images/Booknest/bn4.PNG'), 
+        require('./images/Booknest/bn5.PNG'), 
+        require('./images/Booknest/bn6.PNG'), 
+        require('./images/Booknest/bn7.PNG'), 
+        require('./images/Booknest/bn8.PNG'),    // Image 3
+      ],
+      date: '2024',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionBookNest}</ReactMarkdown>
+    </Typography>
+      
+    },
     {
       title: 'Virtual Dressing Room',
       images: [
@@ -146,8 +314,10 @@ const contactContent = `
         require('./images/Virtualdressing/vr4.png')     // Image 3
       ],
       date: '2024',
-      description: 'This impressive project is a perfect example of modern technology integration...',
-      detailedContent: 'Detailed description and method of development for Project 1...',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionVr}</ReactMarkdown>
+    </Typography>
+      
     },
 
     {
@@ -158,8 +328,52 @@ const contactContent = `
         require('./images/Fitx/fitx3.png')    // Image 3
       ],
       date: '2024',
-      description: 'This impressive project is a perfect example of modern technology integration...',
-      detailedContent: 'Detailed description and method of development for Project 1...',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionFitX}</ReactMarkdown>
+    </Typography>
+    
+    },
+
+    {
+      title: 'RescueMe Web Application Redesign',
+      images: [
+        require('./images/Rescueme/rm1.jpg'),
+        require('./images/Rescueme/rm2.jpg'),
+        require('./images/Rescueme/rm3.jpg'),
+        require('./images/Rescueme/rm4.jpg'),
+        require('./images/Rescueme/rm5.jpg'),
+        require('./images/Rescueme/rm6.jpg'),
+        require('./images/Rescueme/rm7.jpg'),
+        require('./images/Rescueme/rm8.jpg'),
+        require('./images/Rescueme/rm9.jpg'),
+        require('./images/Rescueme/rm10.jpg'),
+        require('./images/Rescueme/rm11.jpg'),
+        require('./images/Rescueme/rm12.jpg'),
+        require('./images/Rescueme/rm13.jpg'),
+        require('./images/Rescueme/rm14.jpg'),
+      ],
+      date: '2023',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionRescueMe}</ReactMarkdown>
+    </Typography>
+    
+    },
+
+    {
+      title: 'CannyCube Mobile Application',
+      images: [
+        require('./images/Cannycube/cc4.jpg'),
+        require('./images/Cannycube/cc5.jpg'),
+        require('./images/Cannycube/cc3.jpg'),
+        require('./images/Cannycube/cc1.jpg'),
+        require('./images/Cannycube/cc2.jpg'),
+
+      ],
+      date: '2023',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionCannyCube}</ReactMarkdown>
+    </Typography>
+    
     },
 
     {
@@ -170,8 +384,10 @@ const contactContent = `
         require('./images/Liontours/fuel5.jpg')    // Image 3
       ],
       date: '2023',
-      description: 'This impressive project is a perfect example of modern technology integration...',
-      detailedContent: 'Detailed description and method of development for Project 1...',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionLionTours}</ReactMarkdown>
+    </Typography>
+      
     },
 
     {
@@ -182,8 +398,10 @@ const contactContent = `
         require('./images/Bookstore/Persona 1.png')    // Image 3
       ],
       date: '2022',
-      description: 'This impressive project is a perfect example of modern technology integration...',
-      detailedContent: 'Detailed description and method of development for Project 1...',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionZuma}</ReactMarkdown>
+    </Typography>
+      
     },
 
     {
@@ -193,8 +411,10 @@ const contactContent = `
         require('./images/Hotelreservation/persona 2.png')  // Image 2    // Image 3
       ],
       date: '2022',
-      description: 'This impressive project is a perfect example of modern technology integration...',
-      detailedContent: 'Detailed description and method of development for Project 1...',
+      description: <Typography variant="body1">
+      <ReactMarkdown>{projectDescriptionHotelReservation}</ReactMarkdown>
+    </Typography>
+      
     }
     
     // Add more projects as needed
@@ -423,17 +643,23 @@ const contactContent = `
   />
   
   {/* Swiping images using react-swipeable-views */}
-  <SwipeableViews>
-    {project.images.map((img, index) => (
-      <CardMedia
-        key={index}
-        component="img"
-        height="auto"
-        image={img}
-        alt={`${project.title} - image ${index + 1}`}
-      />
-    ))}
-  </SwipeableViews>
+  <Swiper
+      spaceBetween={10} // Space between slides
+      slidesPerView={1}  // Number of slides to show       // Enable navigation arrows
+      pagination={{ clickable: true }}  // Enable pagination dots
+      grabCursor={true}  // Enable mouse grabbing on desktop
+    >
+      {project.images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <CardMedia
+            component="img"
+            height="auto"
+            image={img}
+            alt={`${project.title} - image ${index + 1}`}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
   <CardContent>
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
