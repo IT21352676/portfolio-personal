@@ -629,52 +629,48 @@ This project reflects my commitment to using technology for social impact, aimin
 
       {/* Projects Popup */}
       <Dialog open={openProjects} onClose={handleProjectsClose} maxWidth="lg" fullWidth>
-        <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>My Projects 💻</DialogTitle>
-        <DialogContent sx={{ backgroundColor: '#333333' }}>
-          <Grid container spacing={3} sx={{ maxHeight: '70vh', overflowY: 'auto' }}>
-            {exampleProjects.map((project, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
-
-<Card sx={{ maxWidth: 345, backgroundColor: '#696969' }}>
-  <CardHeader
-   
-    title={project.title}
-    subheader={project.date}
-  />
-  
-  {/* Swiping images using react-swipeable-views */}
-  <Swiper
-      spaceBetween={10} // Space between slides
-      slidesPerView={1}  // Number of slides to show       // Enable navigation arrows
-      pagination={{ clickable: true }}  // Enable pagination dots
-      grabCursor={true}  // Enable mouse grabbing on desktop
-    >
-      {project.images.map((img, index) => (
-        <SwiperSlide key={index}>
-          <CardMedia
-            component="img"
-            height="auto"
-            image={img}
-            alt={`${project.title} - image ${index + 1}`}
-          />
-        </SwiperSlide>
+  <DialogTitle sx={{ backgroundColor: '#202020' }} style={{ color: '#ffffff' }}>
+    My Projects 💻
+  </DialogTitle>
+  <DialogContent sx={{ backgroundColor: '#333333', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '16px' }}>
+      {exampleProjects.map((project, index) => (
+        <div key={index} style={{ flex: '1 1 calc(33% - 16px)', minWidth: '300px', maxWidth: '345px' }}>
+          <Card sx={{ backgroundColor: '#696969', height: '100%' }}>
+            <CardHeader
+              title={project.title}
+              subheader={project.date}
+            />
+            {/* Swiping images using react-swipeable-views */}
+            <Swiper
+              spaceBetween={10} // Space between slides
+              slidesPerView={1}  // Number of slides to show
+              pagination={{ clickable: true }}  // Enable pagination dots
+              grabCursor={true}  // Enable mouse grabbing on desktop
+            >
+              {project.images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={img}
+                    alt={`${project.title} - image ${index + 1}`}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <CardContent sx={{ flexGrow: 1 }}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', minHeight: '100px' }}>
+                {project.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        </div>
       ))}
-    </Swiper>
+    </div>
+  </DialogContent>
+</Dialog>
 
-  <CardContent>
-    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-      {project.description}
-    </Typography>
-  </CardContent>
-  
-
-</Card>
-
-              </Grid>
-            ))}
-          </Grid>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
