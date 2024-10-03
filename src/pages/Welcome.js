@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   Container, Button, Dialog, DialogTitle, DialogContent, Card, CardHeader, CardMedia, CardContent,
-  Typography, Grid
+  Typography
 } from '@mui/material';
 
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
