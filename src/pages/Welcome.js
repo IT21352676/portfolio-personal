@@ -424,7 +424,7 @@ This project reflects my commitment to using technology for social impact, aimin
         
      
       
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 30, marginTop:'60px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 30, marginTop:'80px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
