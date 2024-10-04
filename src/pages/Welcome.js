@@ -360,6 +360,7 @@ This project reflects my commitment to using technology for social impact, aimin
       title: 'CannyCube Mobile Application',
       images: [
         require('./images/Cannycube/cc1.PNG'),
+        require('./images/Cannycube/cc2.PNG'),
 
 
       ],
@@ -423,7 +424,7 @@ This project reflects my commitment to using technology for social impact, aimin
         
      
       
-            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 40, marginBlockStart: '80px' }}>
+            <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 300, fontSize: 30, marginTop:'60px' }}>
                 <span style={{
                     background: '-webkit-linear-gradient(white, #38495a)',
                     backgroundClip: 'text',
@@ -494,11 +495,11 @@ This project reflects my commitment to using technology for social impact, aimin
       color: 'white',
       margin: '0 6px',
       padding: '12px 40px',
-      fontSize: '14px',
+      fontSize: '12px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleGithubOpen}
-    startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+    startIcon={<GitHubIcon style={{ fontSize: 20 }} />}
     onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
     onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
   >
@@ -511,12 +512,12 @@ This project reflects my commitment to using technology for social impact, aimin
       backgroundColor: '#808080',
       color: 'white',
       margin: '0 6px',
-      padding: '12px 45px',
-      fontSize: '14px',
+      padding: '12px 40px',
+      fontSize: '12px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleBehanceOpen}
-    startIcon={<FaBehance style={{ fontSize: 30 }} />}
+    startIcon={<FaBehance style={{ fontSize: 20 }} />}
     onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
     onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
   >
@@ -530,11 +531,11 @@ This project reflects my commitment to using technology for social impact, aimin
       color: 'white',
       margin: '0 6px',
       padding: '12px 40px',
-      fontSize: '14px',
+      fontSize: '12px',
       transition: 'background-color 0.3s ease',
     }}
     onClick={handleLinkedinOpen}
-    startIcon={<LinkedInIcon style={{ fontSize: 30 }} />}
+    startIcon={<LinkedInIcon style={{ fontSize: 20 }} />}
     onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
     onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#808080'}
   >
@@ -551,7 +552,7 @@ This project reflects my commitment to using technology for social impact, aimin
             color: 'white',
             margin: '0 10px',
             padding: '12px 24px',
-            fontSize: '14px',
+            fontSize: '12px',
             transition: 'background-color 0.3s',
         }}
         onClick={handleProjectsOpen}
@@ -569,7 +570,7 @@ This project reflects my commitment to using technology for social impact, aimin
             color: 'white',
             margin: '0 10px',
             padding: '12px 24px',
-            fontSize: '14px',
+            fontSize: '12px',
             transition: 'background-color 0.3s',
         }}
         onClick={handleAboutOpen}
@@ -587,7 +588,7 @@ This project reflects my commitment to using technology for social impact, aimin
             color: 'white',
             margin: '0 10px',
             padding: '12px 24px',
-            fontSize: '14px',
+            fontSize: '12px',
             transition: 'background-color 0.3s',
         }}
         onClick={handleContactOpen}

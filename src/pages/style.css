@@ -18,6 +18,9 @@
    /* Optional: center the background image */
     background-repeat: no-repeat;
     background-position:center;
+   
+  
+    min-width:auto;
     
     }
 
