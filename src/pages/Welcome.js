@@ -442,7 +442,7 @@ This project reflects my commitment to using technology for social impact, aimin
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    CODE NOVA<RocketLaunchIcon style={{ fontSize: 30, color: 'white' }} />
+                NOVA CODE<RocketLaunchIcon style={{ fontSize: 30, color: 'white' }} />
                     
                 </span>
             </Typography>
@@ -453,7 +453,7 @@ This project reflects my commitment to using technology for social impact, aimin
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                      BY
+                      WITH
                 </span>
             </Typography>
             <Typography variant="h1" gutterBottom style={{ textAlign: 'center', fontFamily: '"Lato", sans-serif', fontWeight: 800, fontSize: 40, marginBlockStart: '20px' }}>
