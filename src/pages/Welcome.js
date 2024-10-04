@@ -442,7 +442,7 @@ This project reflects my commitment to using technology for social impact, aimin
                     WebkitTextFillColor: 'transparent',
                     letterSpacing: '10px'
                 }}>
-                    COSMICCODE <RocketLaunchIcon style={{ fontSize: 30, color: 'white' }} /> 
+                    CODE NOVA<RocketLaunchIcon style={{ fontSize: 30, color: 'white' }} />
                     
                 </span>
             </Typography>
